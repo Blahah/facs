@@ -370,7 +370,7 @@ get_parainfo (char *full, Queue * head)
       char *previous = NULL;
 	  char *temp = full;
 #ifndef __clang__
-	  int cores = omp_get_num_procs ();
+	  int cores = omp_get_num_threads();
 #else
 	  int cores = 1;
 #endif
