@@ -3,7 +3,8 @@ CFLAGS=-O3 -DFIFO -D_FILE_OFFSET_BITS=64 -D_LARGE_FILE -Wall -g -DNODEBUG
 # Detect OS
 UNAME := $(shell uname)
 ifneq ($(UNAME), Darwin)
-LIBS=-lm -lz -fopenmp 
+LIBS=-lm -lz
+CFLAGS=${CFLAGS} -fopenmp
 else
 CFLAGS=-Wno-unknown-pragmas -Wno-unused-value
 LIBS=-lz
