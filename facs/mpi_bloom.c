@@ -333,7 +333,7 @@ get_parainfo (char *full)
 
   char *temp = full;
 
-  int cores = omp_get_num_threads();
+  int cores = omp_get_num_threads ();
 
   int offsett = buffer * PAGE / cores;
 
